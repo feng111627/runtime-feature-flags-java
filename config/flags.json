@@ -1,0 +1,20 @@
+{
+  "flags": [
+    {
+      "name": "new-checkout",
+      "enabled": true,
+      "rolloutPercentage": 30,
+      "rules": [
+        {"attribute": "group", "operator": "IN", "values": ["beta", "internal"], "description": "内部与 beta 组全量"}
+      ]
+    },
+    {
+      "name": "search-v2",
+      "enabled": true,
+      "rolloutPercentage": 0,
+      "rules": [
+        {"attribute": "region", "operator": "EQUALS", "values": ["cn"], "description": "仅中国区定向"}
+      ]
+    }
+  ]
+}
